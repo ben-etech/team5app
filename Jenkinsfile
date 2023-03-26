@@ -26,5 +26,10 @@ pipeline{
                 sh 'cat /etc/os-release'
             }
         }
+        stage('6-script control'){
+            steps{
+              sh 'bash -x /var/lib/jenkins/workspace/team5-job-demo/script.sh'  
+            }
+        }
 	} 
 }
